@@ -2,3 +2,19 @@
     width: 100vw;
     height: 100vh;
 }
+
+/* #gridContainer {
+    width: 160px;
+    height: 160px;
+} */
+
+
+/* body */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+ box-sizing: border-box;   
+}
