@@ -1,6 +1,16 @@
-/* Create the squares that go inside the main container */
-const gridContainer = document.querySelector('#gridContainer')
 
+let colorHex = 'black'
+const gridContainer = document.querySelector('#gridContainer')
+const colorBtn = document.querySelector('#colorBtn')
+
+
+colorBtn.addEventListener('click', () => {
+    chooseColor()
+})
+let chooseColor = () => {
+    colorHex = prompt('Type in the color hex code or color name')
+    console.log(colorHex)
+}
 let createSquares = () => {
     
     let i = 0;
@@ -9,7 +19,6 @@ let createSquares = () => {
         gridSquare.classList.add('squares')
         gridSquare.setAttribute('style', 'width: 40px; height: 40px; flex-basis: 40px; border: 1px solid black')
         gridContainer.appendChild(gridSquare)
-        console.log(i)
         i++
     }
 }
@@ -20,6 +29,6 @@ const grids = document.querySelectorAll('.squares')
 grids.forEach((square) => {
     
     square.addEventListener('mouseover', () => {
-        square.style.background = 'black'
+        square.style.background = `${colorHex}`
     })
 })
