@@ -1,6 +1,6 @@
 /* Variable Declaration */
 let colorHex = 'black'
-let defaultWidth = 16
+let size = 16
 const gridContainer = document.querySelector('#gridContainer')
 const colorBtn = document.querySelector('#colorBtn')
 const sizeBtn = document.querySelector('#sizeBtn')
@@ -37,7 +37,7 @@ let createSquares = (size) => {
 }
 /* Allow user to create custom canvas */
 let customSize = () => {
-    let size = prompt('Choose the size for the grid (Min: 1, Max: 100): ')
+    size = prompt('Choose the size for the grid (Min: 1, Max: 100): ')
     while (size < 1 || size > 100 ) {
         size = prompt('Please enter size between 1-100: ')
     }
@@ -68,5 +68,5 @@ let draw = () => {
 }
 
 /* Default / Start Program */
-createSquares(defaultWidth)
+createSquares(size)
 draw()
