@@ -16,9 +16,9 @@ let chooseColor = () => {
     colorHex = prompt('Type in the color hex code or color name')
 }
 let createSquares = (size) => {
-    let squareWidth = 0
+    let squareWidth = 960/size
 
-    switch (true) {
+    /* switch (true) {
         case size >= 16 && size <= 25:
             squareWidth = 30
             break
@@ -30,7 +30,7 @@ let createSquares = (size) => {
             break
         default:
             squareWidth = 10
-    }
+    } */
 
 
     gridContainer.setAttribute('style', `width: ${(size*squareWidth)+2}px; height: ${(size*squareWidth)+2}px`)
