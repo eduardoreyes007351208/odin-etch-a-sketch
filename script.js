@@ -3,6 +3,7 @@ let colorHex = 'black'
 const gridContainer = document.querySelector('#gridContainer')
 const colorBtn = document.querySelector('#colorBtn')
 const sizeBtn = document.querySelector('#sizeBtn')
+const currentColorText = document.querySelector('#currentColor')
 
 
 colorBtn.addEventListener('click', () => {
@@ -14,6 +15,7 @@ sizeBtn.addEventListener('click', () => {
 
 let chooseColor = () => {
     colorHex = prompt('Type in the color hex code or color name')
+    currentColorText.textContent = `Current Color: ${colorHex}`
 }
 let createSquares = (size) => {
     let squareWidth = 960/size
@@ -52,6 +54,8 @@ let draw = () => {
         
         })
     })
+
+    currentColorText.textContent = `Current Color: ${colorHex}`
 }
 
 createSquares(16)
