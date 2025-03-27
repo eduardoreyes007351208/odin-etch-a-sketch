@@ -2,9 +2,23 @@
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
+}
+
+.textDiv {
+    text-align: center;
+}
+
+.heading {
+    font-size: 80px;
+    font-style: italic;
+}
+
+.btns {
+    font-size: 24px;
+    padding: 8px;
 }
 
 #gridContainer {
