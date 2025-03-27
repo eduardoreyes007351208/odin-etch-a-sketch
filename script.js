@@ -9,7 +9,6 @@ colorBtn.addEventListener('click', () => {
 })
 let chooseColor = () => {
     colorHex = prompt('Type in the color hex code or color name')
-    console.log(colorHex)
 }
 let createSquares = () => {
     
