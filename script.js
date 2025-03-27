@@ -4,6 +4,7 @@ let size = 16
 const gridContainer = document.querySelector('#gridContainer')
 const colorBtn = document.querySelector('#colorBtn')
 const sizeBtn = document.querySelector('#sizeBtn')
+const resetBtn = document.querySelector('#resetBtn')
 const currentColorText = document.querySelector('#currentColor')
 
 /* Event Listeners */
@@ -12,6 +13,9 @@ colorBtn.addEventListener('click', () => {
 })
 sizeBtn.addEventListener('click', () => {
     customSize()
+})
+resetBtn.addEventListener('click', () => {
+    resetCanvas(size)
 })
 
 /* functions */
@@ -23,7 +27,7 @@ let chooseColor = () => {
 }
 /* Generate the canvas */
 let createSquares = (size) => {
-    let squareWidth = 640/size
+    let squareWidth = Math.round(640/size)
 
     gridContainer.setAttribute('style', `width: ${(size*squareWidth)+80}px; height: ${(size*squareWidth)+80}px`)
     let i = 0;
@@ -65,6 +69,15 @@ let draw = () => {
     })
 
     currentColorText.textContent = `Current Color: ${colorHex}`
+}
+/* Allow users to reset the canvas */
+let resetCanvas = (size) => {
+    const grids = document.querySelectorAll('.squares')
+    grids.forEach((square) => {
+        gridContainer.removeChild(square)
+    })
+    createSquares(size)
+    draw()
 }
 
 /* Default / Start Program */
