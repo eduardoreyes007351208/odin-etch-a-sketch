@@ -1,11 +1,12 @@
-
+/* Variable Declaration */
 let colorHex = 'black'
+let defaultWidth = 16
 const gridContainer = document.querySelector('#gridContainer')
 const colorBtn = document.querySelector('#colorBtn')
 const sizeBtn = document.querySelector('#sizeBtn')
 const currentColorText = document.querySelector('#currentColor')
 
-
+/* Event Listeners */
 colorBtn.addEventListener('click', () => {
     chooseColor()
 })
@@ -13,10 +14,14 @@ sizeBtn.addEventListener('click', () => {
     customSize()
 })
 
+/* functions */
+
+/* Allow User to choose color for drawing */
 let chooseColor = () => {
     colorHex = prompt('Type in the color hex code or color name')
     currentColorText.textContent = `Current Color: ${colorHex}`
 }
+/* Generate the canvas */
 let createSquares = (size) => {
     let squareWidth = 960/size
 
@@ -30,6 +35,7 @@ let createSquares = (size) => {
         i++
     }
 }
+/* Allow user to create custom canvas */
 let customSize = () => {
     let size = prompt('Choose the size for the grid (Min: 16, Max: 100): ')
     while (size < 16 || size > 100 ) {
@@ -42,7 +48,7 @@ let customSize = () => {
     createSquares(size)
     draw()
 }
-
+/* Allow User to draw on canvas */
 let draw = () => {
     const grids = document.querySelectorAll('.squares')
 
@@ -61,5 +67,6 @@ let draw = () => {
     currentColorText.textContent = `Current Color: ${colorHex}`
 }
 
-createSquares(16)
+/* Default / Start Program */
+createSquares(defaultWidth)
 draw()
