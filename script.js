@@ -25,7 +25,7 @@ let chooseColor = () => {
 let createSquares = (size) => {
     let squareWidth = 640/size
 
-    gridContainer.setAttribute('style', `width: ${(size*squareWidth)+2}px; height: ${(size*squareWidth)+2}px`)
+    gridContainer.setAttribute('style', `width: ${(size*squareWidth)+80}px; height: ${(size*squareWidth)+80}px`)
     let i = 0;
     while (i < (size * size)) {
         let gridSquare = document.createElement('div')

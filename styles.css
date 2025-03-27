@@ -24,7 +24,8 @@
 #gridContainer {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
+    border: 40px solid #BC0001;
+    border-radius: 20px;
 }
 
 
