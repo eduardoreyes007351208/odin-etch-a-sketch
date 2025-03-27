@@ -23,7 +23,7 @@ let chooseColor = () => {
 }
 /* Generate the canvas */
 let createSquares = (size) => {
-    let squareWidth = 960/size
+    let squareWidth = 640/size
 
     gridContainer.setAttribute('style', `width: ${(size*squareWidth)+2}px; height: ${(size*squareWidth)+2}px`)
     let i = 0;
