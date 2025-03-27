@@ -18,21 +18,6 @@ let chooseColor = () => {
 let createSquares = (size) => {
     let squareWidth = 960/size
 
-    /* switch (true) {
-        case size >= 16 && size <= 25:
-            squareWidth = 30
-            break
-        case size > 25 && size <= 50:
-            squareWidth = 20
-            break
-        case size > 50 && size <= 100:
-            squareWidth = 10
-            break
-        default:
-            squareWidth = 10
-    } */
-
-
     gridContainer.setAttribute('style', `width: ${(size*squareWidth)+2}px; height: ${(size*squareWidth)+2}px`)
     let i = 0;
     while (i < (size * size)) {
@@ -44,7 +29,7 @@ let createSquares = (size) => {
     }
 }
 let customSize = () => {
-    let size = prompt('Choose the size for the grid (Max Size 100)')
+    let size = prompt('Choose the size for the grid (Min: 16, Max: 100)')
     const grids = document.querySelectorAll('.squares')
     grids.forEach((square) => {
         gridContainer.removeChild(square)
