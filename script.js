@@ -31,13 +31,18 @@ let createSquares = (size) => {
     }
 }
 let customSize = () => {
-    let size = prompt('Choose the size for the grid (Min: 16, Max: 100)')
-    const grids = document.querySelectorAll('.squares')
-    grids.forEach((square) => {
-        gridContainer.removeChild(square)
-    })
-    createSquares(size)
-    draw()
+    let size = prompt('Choose the size for the grid (Min: 16, Max: 100): ')
+    if (size < 16 || size > 100 ) {
+        size = prompt('Please enter size between 16-100: ')
+    } else {
+        const grids = document.querySelectorAll('.squares')
+        grids.forEach((square) => {
+            gridContainer.removeChild(square)
+        })
+        createSquares(size)
+        draw()
+    }
+    
 }
 
 let draw = () => {
