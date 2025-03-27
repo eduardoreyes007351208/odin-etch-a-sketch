@@ -37,9 +37,9 @@ let createSquares = (size) => {
 }
 /* Allow user to create custom canvas */
 let customSize = () => {
-    let size = prompt('Choose the size for the grid (Min: 16, Max: 100): ')
-    while (size < 16 || size > 100 ) {
-        size = prompt('Please enter size between 16-100: ')
+    let size = prompt('Choose the size for the grid (Min: 1, Max: 100): ')
+    while (size < 1 || size > 100 ) {
+        size = prompt('Please enter size between 1-100: ')
     }
     const grids = document.querySelectorAll('.squares')
     grids.forEach((square) => {
