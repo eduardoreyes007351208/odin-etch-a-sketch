@@ -19,6 +19,18 @@
 .btns {
     font-size: 24px;
     padding: 8px;
+    background-color: #BC0001;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: white;
+    margin: 0px 8px;
+    transition: 0.25s;
+}
+
+.btns:hover {
+    transition: 0.25s;
+    scale: 1.1;
+    cursor: pointer;;
 }
 
 #gridContainer {
@@ -33,6 +45,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    background-color: #FDFBD4;
 }
 
 * {

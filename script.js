@@ -34,7 +34,7 @@ let createSquares = (size) => {
     while (i < (size * size)) {
         let gridSquare = document.createElement('div')
         gridSquare.classList.add('squares')
-        gridSquare.setAttribute('style', `width: ${squareWidth}px; height: ${squareWidth}px; flex-basis: ${squareWidth}px; border: 1px solid black`)
+        gridSquare.setAttribute('style', `background: #BFBEC3; width: ${squareWidth}px; height: ${squareWidth}px; flex-basis: ${squareWidth}px; border: 1px solid black`)
         gridContainer.appendChild(gridSquare)
         i++
     }
