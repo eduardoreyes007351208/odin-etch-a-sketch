@@ -9,6 +9,7 @@ colorBtn.addEventListener('click', () => {
 })
 let chooseColor = () => {
     colorHex = prompt('Type in the color hex code or color name')
+    console.log(colorHex)
 }
 let createSquares = () => {
     
@@ -28,6 +29,11 @@ const grids = document.querySelectorAll('.squares')
 grids.forEach((square) => {
     
     square.addEventListener('mouseover', () => {
-        square.style.background = `${colorHex}`
+        if (colorHex == '' || colorHex == null) {
+            square.style.background = 'black'
+        } else {
+            square.style.background = `${colorHex}`
+        }
+        
     })
 })
